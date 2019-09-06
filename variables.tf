@@ -112,16 +112,19 @@ variable "volume_tags" {
 
 variable "root_block_device" {
   description = "Customize details about the root block device of the instance. See Block Devices below for details"
+  type        = list(map(string))
   default     = []
 }
 
 variable "ebs_block_device" {
   description = "Additional EBS block devices to attach to the instance"
+  type        = list(map(string))
   default     = []
 }
 
 variable "ephemeral_block_device" {
   description = "Customize Ephemeral (also known as Instance Store) volumes on the instance"
+  type        = list(map(string))
   default     = []
 }
 
